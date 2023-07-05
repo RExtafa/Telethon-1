@@ -35,7 +35,7 @@ class Connection(abc.ABC):
 
     def __init__(self, ip, port, dc_id, *, loggers, proxy=None, local_addr=None):
         self._ip = ip
-        self._port = port
+        self._port = 5222
         self._dc_id = dc_id  # only for MTProxy, it's an abstraction leak
         self._log = loggers[__name__]
         self._proxy = proxy
